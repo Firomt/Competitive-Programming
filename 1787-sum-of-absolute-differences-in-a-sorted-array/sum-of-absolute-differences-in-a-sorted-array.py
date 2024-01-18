@@ -6,8 +6,10 @@ class Solution:
 
         for i,n in enumerate(nums):
             rightsum=total_sum-left_sum-n
+            left_size=i
+            right_size=len(nums)-i-1
             result.append(
-                n*i-left_sum +   rightsum  - (len(nums)-i-1)*n 
+                left_size*n-left_sum +   rightsum  - right_size*n 
                 )
 
             left_sum+=n
