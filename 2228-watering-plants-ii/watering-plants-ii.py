@@ -8,23 +8,21 @@ class Solution:
         while i<j and( i<len(plants) and j<len(plants)):
             if plants[i]<=capacityA:
                 capacityA-=plants[i]
-                #i+=1
             else:
                 capacityA+=fullA-capacityA
                 capacityA-=plants[i]
                 count+=1
-                
-                #i+=1
+    
             if plants[j]<=capacityB:
                 capacityB-=plants[j]
-                #j-=1
             else:
                 capacityB+=fullB-capacityB
                 capacityB-=plants[j]
                 count+=1
-                #j-=1
+            
             i+=1
             j-=1
+
         if i==j:
             if capacityA>capacityB and plants[i]<=capacityA:
                 capacityA-=plants[i]
