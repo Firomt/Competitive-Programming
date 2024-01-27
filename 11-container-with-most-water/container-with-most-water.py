@@ -11,13 +11,11 @@ class Solution:
             if height[i]<=height[j]:
                 area=height[i]*(j-i)
                 maxArea=max(maxArea,area)
-                #if height[j-1]>=height[i]:
                 i+=1
 
             else:
                 area=height[j]*(j-i)
                 maxArea=max(maxArea,area)
-                #if height[j-1]>=height[i]:
                 j-=1
             
         return maxArea
