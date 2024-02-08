@@ -1,8 +1,24 @@
 class Solution:
     def missingNumber(self, nums: List[int]) -> int:
-        largest=max(nums)
-        for i in range(largest):
-            if i not in nums:
+        i=0
+        while i < len(nums):
+            if nums[i]==len(nums):
+                i+=1
+                continue
+            correct=nums[i]
+            if nums[i] !=  nums[correct]:
+                nums[i],nums[correct]=nums[correct],nums[i]
+            else:
+                i+=1
+        for i in range(len(nums)):
+            if nums[i]!=i:
                 return i
-        return largest+1
+        return len(nums)
+            
+    
+
+               
+        
+
+  
         
