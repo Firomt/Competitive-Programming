@@ -4,6 +4,7 @@ class Solution:
         #each nums[i] should be at index = nums[i]-1 since it is in the range [1,n]
         i=0
         mismatch=[]
+        nums.sort()
 
         while i < len(nums):
             correct=nums[i]-1
@@ -12,9 +13,9 @@ class Solution:
             else:
                 i+=1
         for i in range(len(nums)):
-            if nums[i] != i+1:
-                mismatch.append(nums[i])
-                mismatch.append(i+1)
+            if nums[i] != i+1: #find the number at wrong index(which is the duplicate) 
+                mismatch.append(nums[i]) #the duplicate
+                mismatch.append(i+1) #the number that is missing 
         return mismatch
 
         
