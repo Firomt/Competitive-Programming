@@ -4,7 +4,6 @@ class Solution:
         #each nums[i] should be at index = nums[i]-1 since it is in the range [1,n]
         i=0
         mismatch=[]
-        nums.sort()
 
         while i < len(nums):
             correct=nums[i]-1
