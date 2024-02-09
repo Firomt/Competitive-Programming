@@ -9,6 +9,7 @@ class Solution:
                 nums[i], nums[correct]=nums[correct], nums[i]
             else:
                 i+=1
+        #after sorting if the number is not at its correct index add that number to duplicates
         for i in range(len(nums)):
             if nums[i]!=i+1:
                 duplicates.append(nums[i])
