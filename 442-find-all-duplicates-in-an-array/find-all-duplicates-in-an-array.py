@@ -9,9 +9,10 @@ class Solution:
                 if nums[i] != nums[correct]:
                     nums[i], nums[correct]=nums[correct], nums[i]
                 else:
-                    duplicates.append(nums[i])
+                    if nums[i] not in duplicates:
+                        duplicates.append(nums[i])
                     i+=1
             else:
                 i+=1
-        return set(duplicates)
+        return duplicates
         
