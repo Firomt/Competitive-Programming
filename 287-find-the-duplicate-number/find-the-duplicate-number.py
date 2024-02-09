@@ -3,11 +3,13 @@ class Solution:
         i=0
         #sort it using cycle sort
         while i < len(nums): 
-            correct=nums[i]-1 #for numbers in range[1,n] the correct postion index for the number at nums[i] is i=nums[i]-1
-            if nums[i]!= nums[correct]: 
-                nums[i],nums[correct]=nums[correct],nums[i]
-            elif i!=nums[i]-1 and nums[correct]==nums[i]:#if the element at i hasnt occupied its correct index and if there is another element which is equal to element at i which occupied the correct index then the element at i 
-                return nums[i]                           #cant occupyt its correct index as its duplicate has already occupied it so it is the duplicate so return that element
+            if nums[i] != i+1: #if the current element is not at its correct index
+                correct=nums[i]-1 #find the correct index for nums[i]
+                if nums[i] != nums[correct]: #if the correct index is not already occupied by its duplicate then swap
+                    nums[i], nums[correct]=nums[correct], nums[i]
+                else:
+                    return nums[i] # correct index is already occupied by its duplicate so return this duplicate
             else:
                 i+=1
-        return nums[-1] #after putting the numbers at their correct index the last element will be the duplicate as its duplicate has already occupied its index 
+
+     
