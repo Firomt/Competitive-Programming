@@ -1,3 +1,4 @@
+
 class Solution:
     def sortArray(self, arr: List[int]) -> List[int]:
         if len(arr) <= 1:
@@ -43,3 +44,4 @@ class Solution:
         
         merge_sort(arr)
         return arr
+
