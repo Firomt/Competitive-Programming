@@ -1,11 +1,12 @@
 class Solution:
     def addDigits(self, num: int) -> int:
-        if num >= 10:
-            output = num // 10 + num % 10
-            if output < 10:
-                return output
-            else:
-                return self.addDigits(output)
-        else:
-            return num
+ # Base case: If the number is a single digit, return it.
+        if num < 10:
+            return num 
         
+        # Recursive case: Sum the digits of the number.
+        # Example: 38 --> 3 + 8 --> 11
+        num = num // 10 + num % 10 
+        
+        # Recursively call the function with the updated number.
+        return self.addDigits(num)
