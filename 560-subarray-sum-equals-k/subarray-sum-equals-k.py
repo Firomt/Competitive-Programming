@@ -1,16 +1,16 @@
 class Solution:
     def subarraySum(self, nums: List[int], k: int) -> int:
-        count_subarray=0
-        prefix={0:1}
+        cnt_subarray=0
+        prefix_freq={0:1}
         cur_sum=0
-        for i in nums:
-            cur_sum+=i
+        for num in nums:
+            cur_sum += num
             diff=cur_sum-k
-            
-            count_subarray+= prefix.get(diff,0)
-            prefix[cur_sum]=1 + prefix.get(cur_sum,0)
-        return count_subarray
-            
+            cnt_subarray+=prefix_freq.get(diff,0)
+            prefix_freq[cur_sum]=1 + prefix_freq.get(cur_sum,0)
+
+        return cnt_subarray
+
 
                 
                 
