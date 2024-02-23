@@ -1,7 +1,7 @@
 class MyCalendarTwo:
 
     def __init__(self):
-        self.bookings=defaultdict(int)
+        self.bookings=Counter()
         
 
     def book(self, start: int, end: int) -> bool:
