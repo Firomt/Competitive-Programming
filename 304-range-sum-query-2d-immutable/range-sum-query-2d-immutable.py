@@ -12,11 +12,11 @@ class NumMatrix:
 
     def sumRegion(self, row1: int, col1: int, row2: int, col2: int) -> int:
         r1,r2,c1,c2=row1+1,row2+1,col1+1,col2+1
-        topsum=self.prefixsum[r1-1][c2]
+        abovesum=self.prefixsum[r1-1][c2]
         bottomright=self.prefixsum[r2][c2]
         leftsum=self.prefixsum[r2][c1-1]
-        topleft=self.prefixsum[r1-1][c1-1]
-        return bottomright-topsum-leftsum+topleft
+        topleftsum=self.prefixsum[r1-1][c1-1]
+        return bottomright-abovesum-leftsum+topleftsum
 
     
     
