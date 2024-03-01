@@ -12,14 +12,4 @@ class Solution:
                 anagrams.append([strs[i]])
         return anagrams
 
-        # Hash = {}
-        # anagrams=[ ]
-        # for i in range(len(strs)):
-        #     if ''.join(sorted(strs[i])) in Hash:
-        #         anagrams[Hash[''.join(sorted(str[i]))]].append(strs[i])
-        #     else:
-        #         Hash[''.join(sorted(strs[i]))]=i
-        #         anagrams.append(list(strs[i]))
-
-        return anagrams
         
