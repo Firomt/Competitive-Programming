@@ -1,5 +1,5 @@
-class Solution:
-    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+class Solution(object):
+    def topKFrequent(self, nums, k):
         top_freq=[]
         freq_hash=Counter(nums)
         
@@ -9,4 +9,5 @@ class Solution:
             k-=1
             del freq_hash[cand_key]
         return top_freq
+        
         
