@@ -2,9 +2,9 @@ class Solution:
     def maxNumberOfBalloons(self, text: str) -> int:
         textCount=Counter(text)
         balloon=Counter("balloon")
-        res=float("inf")
+        ans=float("inf")
 
         for c in balloon:
-            res=min(res, textCount[c] //balloon[c])
-        return res
+            ans=min(ans, textCount[c] //balloon[c])
+        return ans
         
