@@ -1,5 +1,3 @@
-from typing import List
-
 class Solution:
     def totalFruit(self, fruits: List[int]) -> int:
         l, r, max_frt = 0, 0, 0
@@ -17,5 +15,7 @@ class Solution:
                     l += 1
                 basket[fruits[r]] = 1
             r += 1
-        return max(max_frt, r - l)
+            
+        return max(max_frt, r-l)
+        
 
