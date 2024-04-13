@@ -11,11 +11,11 @@ class Solution:
                 if i==0:
                     if num_lst[j]=='0':
                         continue
-                    elif (num > 0)and (num_lst[j] < num_lst[i]):
+                    elif num > 0 and num_lst[j] < num_lst[i]:
                         num_lst[i], num_lst[j]=num_lst[j], num_lst[i]
                     elif num < 0:
                         continue
-                elif (num > 0) and (num_lst[j] < num_lst[i]):
+                elif num > 0 and num_lst[j] < num_lst[i]:
                     num_lst[i], num_lst[j]=num_lst[j], num_lst[i]
                 elif num <0 and num_lst[j] > num_lst[i]:
                     num_lst[i], num_lst[j]=num_lst[j], num_lst[i]
