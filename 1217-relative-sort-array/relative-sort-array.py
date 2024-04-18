@@ -13,7 +13,6 @@ class Solution:
         k=len(arr2)-1
         while ( k in range(len(arr1))) and (arr1[k] in arr2):
             k+=1
-        # if k < len(arr1):
         for y in range(k, len(arr1)-1):
             min_idx = y
             for z in range(y+1, len(arr1)):
