@@ -12,18 +12,18 @@ class Solution:
             else:
                 j=0
                 current_pro=1
-                if count > 1:
-                    ans.append(int(0))
-                else:
-                    while nums[j] != num:
-                        current_pro *= nums[j]
-                        j+=1
-                    j=j+1
-                    while j < len(nums):
-                        current_pro *= nums[j]
-                        j+=1
-                    ans.append(int(current_pro))
+                # if count > 1:
+                #     ans.append(int(0))
+                # else:
+                while nums[j] != num:
+                    current_pro *= nums[j]
+                    j+=1
+                j=j+1
+                while j < len(nums):
+                    current_pro *= nums[j]
+                    j+=1
+                ans.append(int(current_pro))
         return ans
-            
-    
         
+
+    
