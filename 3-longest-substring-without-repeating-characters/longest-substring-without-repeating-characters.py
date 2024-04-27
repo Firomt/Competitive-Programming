@@ -10,18 +10,12 @@ class Solution:
         while i<= j and j in range(len(s)):
             if s[j] in hashMap:
                 while s[j] in hashMap:
-                    if s[i]==s[j]:
-                        del hashMap[s[j]]
-                    if s[i] in hashMap:
-                        del hashMap[s[i]]
+                    del hashMap[s[i]]
                     i+=1
-                  
-             
+
             hashMap[s[j]]=1
-            
             maxLen=max(maxLen, j-i+1)
             j+=1 
-          
+
         return maxLen
 
-        
